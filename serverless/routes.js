@@ -1,6 +1,5 @@
 const serverless = require("serverless-http");
 const express = require("express");
-const knex = require("knex")
 const sql = require("mysql")
 const app = express();
 
