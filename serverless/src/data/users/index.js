@@ -1,6 +1,6 @@
 'use strict';
-const utils = require('../utils');
-const config = require('../../config');
+const utils = require('../../utils');
+const config = require('../../../config');
 const sql = require('mysql');
 
 const getAllUsers = async () => {
