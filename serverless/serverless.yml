@@ -19,3 +19,17 @@ functions:
       - http:
           path: /{proxy+}
           method: ANY
+      - http:
+          path: /:id
+          method: ANY
+      - http:
+          path: /cadastraUsuario
+          method: POST
+      - http:
+          path: /alteraUsuario
+          method: PUT
+      - http:
+          path: /deleteUsuario/:id
+          method: DELETE
+plugins:
+  - serverless-offline

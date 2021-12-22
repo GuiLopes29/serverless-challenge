@@ -1,0 +1,1 @@
+DELETE FROM serverless.users WHERE Id = ?
