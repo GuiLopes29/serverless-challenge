@@ -2,26 +2,10 @@ const serverless = require("serverless-http");
 const express = require("express");
 const sql = require("mysql")
 const app = express();
+const config = require('./config')
 
-const host = 'database-1.cvzxqntwwqsu.us-east-1.rds.amazonaws.com'
-const user = 'admin'
-const pass = ''
-const database = ''
-
-const connection = {
-  ssl: { rejectUnauthorized: false},
-  host,
-  user, 
-  pass,
-  database
-}
-
-const knex = knex({
-  client: 'mysql',
-  connection
-})
-
-
+let pool = await sql.createConnection(config.sql)
+console.log(pool)
 app.get("/", (req, res, next) => {
   return res.status(200).json({
     message: "Hello from root!",
