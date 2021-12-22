@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const user = require("./src/data/users/")
 
-const users = await user.getAllUsers()
+const users = user.getAllUsers()
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
