@@ -4,7 +4,7 @@ const sql = require("mysql")
 const app = express();
 const config = require('./config')
 
-let pool = await sql.createConnection(config.sql)
+let pool = sql.createConnection(config.sql)
 console.log(pool)
 app.get("/", (req, res, next) => {
   return res.status(200).json({
