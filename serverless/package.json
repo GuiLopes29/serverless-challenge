@@ -4,6 +4,9 @@
   "description": "",
   "dependencies": {
     "express": "^4.17.1",
-    "serverless-http": "^2.7.0"
+    "knex": "^0.95.15",
+    "mysql": "^2.18.1",
+    "serverless-http": "^2.7.0",
+    "yum": "^0.1.1"
   }
 }

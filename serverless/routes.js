@@ -1,6 +1,27 @@
 const serverless = require("serverless-http");
 const express = require("express");
+const knex = require("knex")
+const sql = require("mysql")
 const app = express();
+
+const host = 'database-1.cvzxqntwwqsu.us-east-1.rds.amazonaws.com'
+const user = 'admin'
+const pass = ''
+const database = ''
+
+const connection = {
+  ssl: { rejectUnauthorized: false},
+  host,
+  user, 
+  pass,
+  database
+}
+
+const knex = knex({
+  client: 'mysql',
+  connection
+})
+
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
@@ -20,4 +41,4 @@ app.use((req, res, next) => {
   });
 });
 
-module.exports.handler = serverless(app);
+module.exports.routes = serverless(app);
