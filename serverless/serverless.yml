@@ -11,7 +11,7 @@ provider:
 
 functions:
   api:
-    handler: routes.routes
+    handler: handler.handler
     events:
       - http:
           path: /

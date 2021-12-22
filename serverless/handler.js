@@ -25,4 +25,4 @@ app.use((req, res, next) => {
   });
 });
 
-module.exports.routes = serverless(app);
+module.exports.handler = serverless(app);
