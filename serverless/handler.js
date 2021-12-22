@@ -1,15 +1,15 @@
+"use strict";
 const serverless = require("serverless-http");
 const express = require("express");
-const sql = require("mysql")
 const app = express();
-const config = require('./config')
+const user = require("./src/data/users/")
 
-let pool = sql.createConnection(config.sql)
-console.log(pool)
+const users = await user.getAllUsers()
+
 app.get("/", (req, res, next) => {
   return res.status(200).json({
     message: "Hello from root!",
-    info: `${pool}`
+    info: users
   });
 });
 
