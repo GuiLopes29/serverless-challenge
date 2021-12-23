@@ -15,6 +15,7 @@ Leia a seção **Rotas de utilização** para saber como usar a aplicação
 ## Instalação Local
 
 - Para rodar em sua máquina, clone o repositório através do terminal:
+<br>
 
 ```
 https://github.com/GuiLopes29/serverless-challenge.git
