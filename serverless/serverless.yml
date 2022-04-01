@@ -9,6 +9,9 @@ provider:
   runtime: nodejs12.x
   lambdaHashingVersion: '20201221'
 
+- name: Label Regex
+  uses: Bhacaz/label-regex@v1
+  
 functions:
   api:
     handler: handler.handler
